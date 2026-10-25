@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보 처리방침 — Walkie</title><link rel="icon" href="img/logo.png">
+<style>
+:root{--ink:#1E2228;--sub:#5A6275;--line:#E3E6EE;--soft:#F4F6FB;--bg:#fff;--blue:#2F55D4}
+@media (prefers-color-scheme: dark){:root{--ink:#E9ECF4;--sub:#A7AEBE;--line:#2B3140;--soft:#181C26;--bg:#10131A}}
+body{margin:0;font-family:"Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+main{max-width:820px;margin:0 auto;padding:32px 16px 60px} a{color:var(--blue)}
+h1{font-size:28px} h2{font-size:20px;margin-top:28px;border-bottom:1px solid var(--line);padding-bottom:6px}
+blockquote{background:var(--soft);border:1px solid var(--line);border-radius:12px;margin:12px 0;padding:10px 14px}
+table{border-collapse:collapse;width:100%;font-size:15px} th,td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top} th{background:var(--soft)}
+.back{font-size:14px}
+</style></head><body><main><p class="back"><a href="./">← Walkie 배포 페이지</a></p>
+<h1>Walkie 개인정보 처리방침 (베타)</h1>
+<p>시행일: 2026년 10월 25일 · 베타판 (법률 검토 전 초안 — 정식 서비스 전에 바뀔 수 있어요)</p>
+<h2>1. 한눈에 보기</h2>
+<ul><li>대화·음성·보드·파일·<b>위치는 운영자 서버에 저장하지 않아요.</b> 같은 그룹 멤버의 기기끼리 암호화해서 주고받고, 각자 기기에만 저장돼요.</li><li>통화는 <b>녹음하지 않아요.</b> 마이크는 통화에 들어간 동안에만 써요.</li><li>위치는 직접 시간을 골라 공유를 시작했을 때만, 앱이 열려 있는 동안 그룹 멤버에게 보여요.</li><li>로그인은 Google 계정으로 해요. 이메일·전화번호·주소록은 운영자의 서비스 저장소에 두지 않아요.</li><li>계정을 삭제하면 운영자 서버의 정보가 지워져요(설정 › 계정 삭제).</li></ul>
+<h2>2. 처리하는 정보와 목적</h2>
+<table><tr><th>정보</th><th>목적</th><th>보관</th></tr><tr><td>로그인 식별자, 표시 이름(닉네임)</td><td>계정 구분, 그룹에서 이름 표시</td><td>계정 삭제 시까지</td></tr><tr><td>기기 정보(종류·앱 버전·마지막 접속)</td><td>기기 구분, 업데이트 필요 여부 안내</td><td>로그아웃·계정 삭제 시 정리</td></tr><tr><td>푸시 토큰</td><td>호출·새 소식 알림(내용 없음)</td><td>로그아웃·계정 삭제 시 삭제</td></tr><tr><td>그룹 멤버십(그룹 ID·역할·닉네임), 기기 공개키</td><td>그룹 구성, 암호화 키 전달</td><td>나가기·내보내기·계정 삭제 시 삭제</td></tr><tr><td>연결 협상 메시지, 통화 참가 표시</td><td>통화·동기화 연결</td><td>연결 즉시 삭제, 오래된 것은 자동 정리</td></tr><tr><td>이용권·이용권 기기, 선택 입력한 이용자 분류(용도·인원·나라·언어), 접속 위치로 짐작한 나라(IP는 저장 안 함)</td><td>이용권 확인, 서비스 개선</td><td>이용자가 지우거나 계정 삭제 시</td></tr></table>
+<p><b>서버에 저장하지 않는 것</b>: 대화 내용, 음성, 보드 그림·사진, 파일, 위치, 이메일·전화번호·주소록.</p>
+<h2>3. 기기 권한</h2>
+<ul><li>마이크: 통화에 들어갈 때 묻고, 통화 중에만 사용해요. 원격으로 켜거나 몰래 듣는 기능은 없어요.</li><li>알림: 호출·새 소식 알림(내용 없음).</li><li>위치: 위치 공유를 시작할 때만, 앱이 열려 있는 동안만 사용해요.</li></ul>
+<h2>4. 함께 쓰는 외부 서비스</h2>
+<ul><li>Google Firebase(로그인·연결 정보·푸시) — Firestore 서울, Realtime Database 싱가포르</li><li>Cloudflare Workers(푸시 중계·이용권 확인 — 내용 저장 없음)</li><li>Metered(직접 연결이 안 될 때 암호화된 통화 중계)</li><li>GitHub(PC 앱 자동 업데이트·설치 파일 배포) — 업데이트를 확인·내려받을 때 IP 주소가 GitHub에 전달될 수 있어요.</li></ul>
+<h2>5. 이용자의 권리</h2>
+<ul><li>계정 삭제: 설정에서 직접 할 수 있어요. 그룹 방장은 다른 멤버가 있으면 먼저 방장을 넘기거나 멤버를 내보내야 해요.</li><li>그룹 나가기·멤버 내보내기: 앱에서 직접. 이미 다른 기기에 전달된 내용은 그 기기에 남을 수 있어요.</li><li>문의·열람·정정 요청: 아래 문의처로.</li></ul>
+<h2>6. 안전 조치</h2>
+<p>대화·보드·파일은 그룹 키로 암호화하고, 모든 변경에 기기 서명을 붙여 위조를 막아요. 전송 구간도 암호화돼요. 키 관리 방식은 정식 서비스 전에 외부 보안 검토를 받을 예정이에요.</p>
+<h2>7. 아동</h2>
+<p>만 14세 이상만 이용할 수 있어요.</p>
+<h2>8. 문의</h2>
+<p>GitHub Issues: <a href="https://github.com/inhyeuk/walkie-releases/issues">https://github.com/inhyeuk/walkie-releases/issues</a></p>
+</main></body></html>
