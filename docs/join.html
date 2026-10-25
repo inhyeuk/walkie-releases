@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Walkie 초대</title>
+<meta name="description" content="Walkie 그룹 초대 — 설치하고 링크로 참여하세요.">
+<meta property="og:title" content="Walkie 그룹에 초대받았어요">
+<meta property="og:description" content="통화하면서 같은 보드에 함께 그리는 앱. 이 링크를 열면 설치와 참여 방법이 나와요.">
+<meta property="og:image" content="https://inhyeuk.github.io/walkie-releases/img/og.png">
+<link rel="icon" href="img/logo.png">
+<style>
+  :root { --ink:#1E2228; --sub:#5A6275; --blue:#2F55D4; --line:#E3E6EE; --soft:#F4F6FB; --bg:#FFFFFF; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#E9ECF4; --sub:#A7AEBE; --line:#2B3140; --soft:#181C26; --bg:#10131A; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+  header { background: linear-gradient(135deg, #1E3FA8 0%, #4B3BC4 55%, #7A4FD0 100%); color: #fff; padding: 36px 16px 40px; text-align: center; }
+  header img { width: 64px; height: 64px; border-radius: 18px; box-shadow: 0 10px 24px rgba(0,0,0,.25); }
+  header h1 { font-size: clamp(22px, 5vw, 30px); margin: 14px 0 4px; }
+  header p { margin: 0; opacity: .9; }
+  main { max-width: 640px; margin: 0 auto; padding: 20px 16px 48px; }
+  .card { background: var(--soft); border: 1px solid var(--line); border-radius: 18px; padding: 18px; margin-top: 14px; }
+  .card h2 { font-size: 18px; margin: 0 0 8px; }
+  .step { display: inline-block; background: var(--blue); color: #fff; border-radius: 99px; width: 26px; height: 26px; text-align: center; font-weight: 800; margin-right: 6px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 18px; border-radius: 14px; font-weight: 800; text-decoration: none; font-size: 16px; border: 0; cursor: pointer; background: var(--blue); color: #fff; margin: 6px 6px 0 0; }
+  .btn.ghost { background: transparent; color: var(--blue); border: 1px solid var(--blue); }
+  .muted { color: var(--sub); font-size: 14px; }
+  .warn { background: #FFF6E5; color: #5B4300; border: 1px solid #F2D49B; border-radius: 14px; padding: 12px 14px; font-size: 14px; }
+  .hidden { display: none; }
+  code { word-break: break-all; }
+</style>
+</head>
+<body>
+<header>
+  <img src="img/logo.png" alt="">
+  <h1 id="title">Walkie 그룹에 초대받았어요</h1>
+  <p>통화하면서 같은 보드에 함께 그리는 우리끼리의 공간</p>
+</header>
+<main>
+  <div id="bad" class="warn hidden">이 초대 링크는 모양이 올바르지 않아요. 보낸 사람에게 링크를 다시 받아 주세요.</div>
+
+  <div id="ok">
+    <div class="card">
+      <h2><span class="step">1</span>Walkie 설치하기</h2>
+      <p class="muted" id="osHint">이미 설치했다면 2번으로 넘어가세요.</p>
+      <a class="btn" id="getWin" href="https://github.com/inhyeuk/walkie-releases/releases/latest/download/WalkieSetup.exe">⬇ Windows용 받기</a>
+      <a class="btn" id="getApk" href="https://github.com/inhyeuk/walkie-releases/releases/latest/download/Walkie-android.apk">📱 안드로이드 APK</a>
+      <p class="muted">Windows에서 "PC 보호" 창이 뜨면 <b>추가 정보 → 실행</b>, 안드로이드는 "출처를 알 수 없는 앱 설치"를 허용해 주세요. <a href="./">자세히</a></p>
+    </div>
+
+    <div class="card">
+      <h2><span class="step">2</span>Walkie에서 열어 참여하기</h2>
+      <p>설치했다면 아래 단추를 누르세요. Walkie가 열리고 <b>참여할지 묻는 창</b>이 떠요(로그인과 닉네임을 먼저 물을 수 있어요).</p>
+      <a class="btn" id="open" href="#">Walkie에서 열기</a>
+      <button class="btn ghost" id="copy" type="button">초대 링크 복사</button>
+      <p class="muted" id="copied" aria-live="polite"></p>
+      <p class="muted">단추가 안 되면: Walkie 홈 › <b>초대 링크로 참여</b>에 복사한 링크를 붙여 넣으세요.</p>
+      <p class="muted" id="pin"></p>
+    </div>
+
+    <div class="card">
+      <h2>알아 두세요</h2>
+      <ul class="muted">
+        <li>초대 링크는 <b>한 번만</b> 쓸 수 있고 며칠 뒤 만료돼요.</li>
+        <li>대화와 보드는 서버에 저장하지 않고 멤버 기기끼리 암호화해서 주고받아요.</li>
+        <li>2026년 12월 31일까지 모든 기능이 무료예요.</li>
+      </ul>
+    </div>
+  </div>
+</main>
+<script>
+  // 초대 값은 주소의 # 뒤에만 있어 서버(GitHub Pages)로 전송되지 않는다. 이 페이지는 아무 데도 보내지 않는다.
+  (function () {
+    var q = new URLSearchParams(location.hash.slice(1));
+    var g = q.get('g'), t = q.get('t'), n = (q.get('n') || '').slice(0, 40), o = q.get('o');
+    var id = /^[A-Za-z0-9_-]{8,64}$/;
+    if (!g || !t || !id.test(g) || !id.test(t)) {
+      document.getElementById('bad').classList.remove('hidden');
+      document.getElementById('ok').classList.add('hidden');
+      return;
+    }
+    var p = new URLSearchParams({ g: g, t: t, n: n });
+    if (o && /^[0-9a-f]{32}$/.test(o)) {
+      p.set('o', o);
+      document.getElementById('pin').textContent = '방장 확인 코드: ' + o.slice(0, 4) + '-' + o.slice(4, 8) + ' — 참여 창의 코드와 같아야 해요.';
+    }
+    var link = 'walkie://join?' + p.toString();
+    if (n) {
+      document.getElementById('title').textContent = '"' + n + '" 그룹에 초대받았어요';
+      document.title = n + ' — Walkie 초대';
+    }
+    document.getElementById('open').setAttribute('href', link);
+    document.getElementById('copy').addEventListener('click', function () {
+      var done = function () { document.getElementById('copied').textContent = '복사했어요. Walkie에 붙여 넣으세요.'; };
+      if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(done, function () { prompt('이 링크를 복사하세요', location.href); });
+      else prompt('이 링크를 복사하세요', location.href);
+    });
+    var ua = navigator.userAgent;
+    if (/Android/i.test(ua)) { document.getElementById('getWin').classList.add('hidden'); document.getElementById('osHint').textContent = '안드로이드 폰이에요. 이미 설치했다면 2번으로 넘어가세요.'; }
+    else if (/Windows/i.test(ua)) { document.getElementById('getApk').classList.add('hidden'); }
+    else if (/iPhone|iPad|Mac/i.test(ua)) { document.getElementById('osHint').textContent = '아직 iPhone·Mac용은 없어요(준비 중). Windows PC나 안드로이드 폰에서 열어 주세요.'; }
+  })();
+</script>
+</body>
+</html>
