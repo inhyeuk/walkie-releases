@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Walkie — 말하면서, 같은 판에 바로 그리는 우리끼리의 공간</title>
+<meta name="description" content="초대한 사람끼리만 쓰는 그룹 통화·채팅·함께 그리는 보드. 내용은 서버에 저장하지 않아요. 무료 베타(2026년 말까지 모든 기능 무료).">
+<meta property="og:title" content="Walkie — 무료 베타">
+<meta property="og:description" content="통화하면서 같은 보드에 함께 그려요. PC + 안드로이드, 2026년 말까지 모든 기능 무료.">
+<meta property="og:image" content="https://inhyeuk.github.io/walkie-releases/img/og.png">
+<meta property="og:url" content="https://inhyeuk.github.io/walkie-releases/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/logo.png">
+<style>
+  :root { --ink:#1E2228; --sub:#5A6275; --blue:#2F55D4; --line:#E3E6EE; --soft:#F4F6FB; --bg:#FFFFFF; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#E9ECF4; --sub:#A7AEBE; --line:#2B3140; --soft:#181C26; --bg:#10131A; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+  a { color: var(--blue); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+  header.hero { background: linear-gradient(135deg, #1E3FA8 0%, #4B3BC4 55%, #7A4FD0 100%); color: #fff; padding: 56px 0 64px; }
+  .hero .top { display: flex; align-items: center; gap: 14px; }
+  .hero img.logo { width: 64px; height: 64px; border-radius: 18px; box-shadow: 0 10px 24px rgba(0,0,0,.25); }
+  .hero h1 { font-size: clamp(28px, 5vw, 44px); margin: 22px 0 8px; letter-spacing: -0.5px; }
+  .hero p.lead { font-size: clamp(16px, 2.4vw, 20px); opacity: .92; margin: 0 0 22px; }
+  .pill { display: inline-block; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.4); padding: 4px 12px; border-radius: 99px; margin: 0 6px 6px 0; font-weight: 700; font-size: 14px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 20px; border-radius: 14px; font-weight: 800; text-decoration: none; font-size: 16px; }
+  .btn.primary { background: #fff; color: #2B3FB8; box-shadow: 0 8px 18px rgba(0,0,0,.18); }
+  .btn.ghost { background: rgba(255,255,255,.12); color: #fff; border: 1px solid rgba(255,255,255,.45); }
+  section { padding: 44px 0; }
+  h2 { font-size: 26px; margin: 0 0 18px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+  .card { background: var(--soft); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+  .card h3 { margin: 0 0 6px; font-size: 17px; }
+  .card p { margin: 0; color: var(--sub); font-size: 15px; }
+  .shot { width: 100%; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 10px 24px rgba(20,30,60,.12); }
+  .dl { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 720px) { .dl { grid-template-columns: 1fr; } }
+  .dl .card { display: flex; flex-direction: column; gap: 8px; }
+  .dl .card a.btn { background: var(--blue); color: #fff; align-self: flex-start; }
+  .qr { display: flex; gap: 14px; align-items: center; }
+  .qr img { width: 120px; height: 120px; border-radius: 12px; background: #fff; padding: 6px; }
+  .note { background: #FFF6E5; color: #5B4300; border: 1px solid #F2D49B; border-radius: 14px; padding: 14px 16px; font-size: 15px; }
+  ol li, ul li { margin-bottom: 6px; }
+  footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--sub); font-size: 14px; }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="top"><img class="logo" src="img/logo.png" alt=""><strong style="font-size:22px">Walkie</strong></div>
+    <h1>말하면서, 같은 판에 바로 그리는<br>우리끼리의 공간</h1>
+    <p class="lead">초대한 사람끼리만 쓰는 그룹 통화 · 채팅 · 함께 그리는 보드. 내용은 서버에 저장하지 않아요.</p>
+    <span class="pill">무료 베타</span><span class="pill">2026년 말까지 모든 기능 무료</span><span class="pill">PC + 안드로이드</span>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/inhyeuk/walkie-releases/releases/latest/download/WalkieSetup.exe">⬇ Windows용 받기</a>
+      <a class="btn ghost" href="https://github.com/inhyeuk/walkie-releases/releases/latest/download/Walkie-android.apk">📱 안드로이드 APK</a>
+      <a class="btn ghost" href="https://github.com/inhyeuk/walkie-releases/releases/latest/download/Walkie-Guide-ko.pdf">📘 사용 설명서(PDF)</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>이런 걸 할 수 있어요</h2>
+    <div class="grid">
+      <div class="card"><h3>🎙 버튼 하나로 그룹 통화</h3><p>통화를 시작하면 멤버를 불러요. 입장은 각자 직접 눌러야 해요. 녹음은 하지 않아요.</p></div>
+      <div class="card"><h3>🖊 함께 그리는 보드</h3><p>펜·도형·화살표·포스트잇·표·목록·사진·파일·유튜브까지 한 판에. 실시간으로 함께 고쳐요.</p></div>
+      <div class="card"><h3>🔒 내용은 기기에만</h3><p>대화·보드·파일은 서버에 남지 않아요. 멤버 기기끼리 암호화해 주고받아요.</p></div>
+      <div class="card"><h3>🗂 그룹 카테고리</h3><p>그룹이 많아도 카테고리로 묶고 접어 깔끔하게 정리해요.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--soft)">
+  <div class="wrap">
+    <h2>화면 미리 보기</h2>
+    <div class="grid">
+      <img class="shot" src="img/board-timeline.png" alt="보드: 시간순 스토리 라인">
+      <img class="shot" src="img/board-network.png" alt="보드: 연구 지도">
+      <img class="shot" src="img/board-crime.png" alt="보드: 조직도">
+      <img class="shot" src="img/category.png" alt="그룹 카테고리">
+    </div>
+  </div>
+</section>
+
+<section id="download">
+  <div class="wrap">
+    <h2>내려받기</h2>
+    <div class="dl">
+      <div class="card">
+        <h3>💻 Windows 10 · 11</h3>
+        <p>설치 프로그램을 실행하면 관리자 권한 없이 설치돼요. <b>새 버전은 자동으로 업데이트</b>돼요.</p>
+        <a class="btn" href="https://github.com/inhyeuk/walkie-releases/releases/latest/download/WalkieSetup.exe">WalkieSetup.exe</a>
+        <p>설치 없이 쓰기: <a href="https://github.com/inhyeuk/walkie-releases/releases/latest/download/Walkie-Windows-portable.zip">휴대용 압축(zip)</a></p>
+        <p>"Windows의 PC 보호" 창이 뜨면 <b>추가 정보 → 실행</b>을 눌러 주세요(코드 서명 전인 개인 개발 앱이라 뜨는 안내예요).</p>
+      </div>
+      <div class="card">
+        <h3>📱 안드로이드(필요한 분만)</h3>
+        <p>앱 마켓이 아닌 설치 파일(APK)로 제공해요. 폰 카메라로 QR을 찍어 받으세요.</p>
+        <div class="qr"><img src="img/qr-apk.png" alt="APK QR 코드"><div><a class="btn" href="https://github.com/inhyeuk/walkie-releases/releases/latest/download/Walkie-android.apk">Walkie-android.apk</a></div></div>
+        <p>설치할 때 "출처를 알 수 없는 앱 설치"를 허용해 주세요. 폰 앱은 자동 업데이트가 없어요 — 새 APK를 같은 방법으로 설치하면 돼요.</p>
+      </div>
+    </div>
+    <p style="margin-top:14px">모든 판과 바뀐 내용: <a href="https://github.com/inhyeuk/walkie-releases/releases">릴리스 목록</a> · 파일 확인용 SHA-256은 각 릴리스의 SHA256SUMS.txt</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="note"><b>베타 안내</b> — 지금은 무료 베타예요(2026년 12월 31일까지 모든 기능 무료). 기능과 약관은 정식 서비스 전에 바뀔 수 있어요. PC 앱은 인터넷에 연결되면 새 버전을 스스로 받아 앱을 닫거나 다음에 켤 때 자동으로 설치해요(<a href="terms.html">이용약관</a> 제5조). 만 14세 이상만 이용할 수 있어요.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="terms.html">이용약관</a> · <a href="privacy.html">개인정보 처리방침</a> · <a href="https://github.com/inhyeuk/walkie-releases/issues">문의·버그 신고</a><br>
+    © 2026 Walkie (베타)
+  </div>
+</footer>
+</body>
+</html>
