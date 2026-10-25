@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Walkie 활용 — 이렇게 써 보세요</title>
+<meta name="description" content="소설 설정 정리, 추리·사건 보드, 스터디 판서, 연구 지도, 여행 계획. 통화하면서 같은 보드에 함께 정리하는 Walkie 활용법과 샘플 보드.">
+<meta property="og:title" content="Walkie 활용 — 말하면서 같이 정리하는 모든 일">
+<meta property="og:description" content="소설 관계도, 사건 보드, 스터디 판서, 연구 지도. 샘플 보드를 받아 바로 열어 보세요.">
+<meta property="og:image" content="https://inhyeuk.github.io/walkie-releases/img/og.png">
+<link rel="icon" href="img/logo.png">
+<style>
+  :root { --ink:#1E2228; --sub:#5A6275; --blue:#2F55D4; --line:#E3E6EE; --soft:#F4F6FB; --bg:#FFFFFF; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#E9ECF4; --sub:#A7AEBE; --line:#2B3140; --soft:#181C26; --bg:#10131A; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.65; }
+  a { color: var(--blue); }
+  header { background: linear-gradient(135deg, #1E3FA8 0%, #4B3BC4 55%, #7A4FD0 100%); color: #fff; padding: 40px 16px 44px; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 16px; }
+  header h1 { font-size: clamp(24px, 5vw, 36px); margin: 8px 0 6px; }
+  header p { margin: 0; opacity: .92; }
+  nav.jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  nav.jump a { color: #fff; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.4); border-radius: 99px; padding: 4px 12px; text-decoration: none; font-weight: 700; font-size: 14px; }
+  section { padding: 36px 0; border-bottom: 1px solid var(--line); }
+  .use { display: grid; grid-template-columns: 1.1fr 1fr; gap: 22px; align-items: center; }
+  @media (max-width: 760px) { .use { grid-template-columns: 1fr; } }
+  .use img { width: 100%; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 10px 24px rgba(20,30,60,.12); }
+  h2 { font-size: 24px; margin: 0 0 8px; }
+  .who { color: var(--sub); font-weight: 700; margin: 0 0 10px; }
+  ul { padding-left: 20px; } li { margin-bottom: 4px; }
+  .btn { display: inline-block; padding: 10px 16px; border-radius: 12px; font-weight: 800; text-decoration: none; background: var(--blue); color: #fff; margin: 6px 6px 0 0; }
+  .btn.ghost { background: transparent; color: var(--blue); border: 1px solid var(--blue); }
+  .note { color: var(--sub); font-size: 14px; }
+  footer { padding: 26px 0 40px; color: var(--sub); font-size: 14px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a href="./" style="color:#fff;text-decoration:none;font-weight:800">← Walkie</a>
+    <h1>말하면서, 같이 정리하는 모든 일</h1>
+    <p>통화를 켜 두고 같은 보드에 함께 그려요. 샘플 보드를 받아 Walkie에서 열어 보세요(앱에도 들어 있어요).</p>
+    <nav class="jump"><a href="#writers">소설·웹툰 작가</a><a href="#mystery">추리·사건 정리</a><a href="#study">스터디·수업</a><a href="#research">연구·공부 지도</a><a href="#family">가족·모임</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="writers">
+    <div class="use">
+      <div>
+        <p class="who">소설·웹툰 작가, 세계관을 함께 만드는 팀</p>
+        <h2>인물 관계도와 스토리 라인을 한 판에</h2>
+        <ul>
+          <li>인물 카드·관계선·종족별 영역으로 관계도를 그리고, 아래에는 시간순 사건 흐름</li>
+          <li>공동 작가·편집자와 통화하며 같은 판을 고쳐요 — 누가 무엇을 만들었는지 이름표로 보여요</li>
+          <li>원고 내용은 서버에 저장되지 않아요(멤버 기기끼리 암호화)</li>
+        </ul>
+        <a class="btn" href="samples/lotr.walkie" download>샘플: 반지의 제왕 관계도</a>
+        <a class="btn ghost" href="samples/little_prince.walkie" download>샘플: 어린 왕자 스토리 라인</a>
+      </div>
+      <img src="img/board-timeline.png" alt="시간순 스토리 라인 보드" loading="lazy">
+    </div>
+  </section>
+
+  <section id="mystery">
+    <div class="use">
+      <img src="img/board-crime.png" alt="범죄 조직도 보드" loading="lazy">
+      <div>
+        <p class="who">추리 소설·TRPG 모임, 사건을 정리하는 사람</p>
+        <h2>수사 기록 벽처럼: 인물·증거·관계를 실로 잇기</h2>
+        <ul>
+          <li>사진·증거 카드·빨간 실(범행)·파란 실(수사)로 조직도를 짜요</li>
+          <li>함께 추리하며 실시간으로 옮기고, 보드 여러 장으로 사건별 정리</li>
+        </ul>
+        <a class="btn" href="samples/valley_of_fear.walkie" download>샘플: 셜록 홈스 『공포의 계곡』 조직도</a>
+        <a class="btn ghost" href="samples/nth_case.walkie" download>샘플: 기사 도해를 재구성한 사건 분석</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="study">
+    <div class="use">
+      <div>
+        <p class="who">스터디 그룹, 과외·온라인 수업</p>
+        <h2>통화하면서 같은 판에 판서</h2>
+        <ul>
+          <li>펜·도형·화살표·표·목록으로 문제 풀이를 함께 적어요</li>
+          <li>"따라가기"로 설명하는 사람이 보는 곳을 같이 봐요</li>
+          <li>끝나면 PNG로 저장하거나 보드째 백업(.walkie)해서 나눠요</li>
+        </ul>
+        <a class="btn" href="./#download">Walkie 받기</a>
+      </div>
+      <img src="img/home.png" alt="Walkie 홈 화면" loading="lazy">
+    </div>
+  </section>
+
+  <section id="research">
+    <div class="use">
+      <img src="img/board-network.png" alt="연구 지도 보드" loading="lazy">
+      <div>
+        <p class="who">연구실·독서 모임·깊게 공부하는 사람</p>
+        <h2>개념과 사람, 사건을 잇는 연구 지도</h2>
+        <ul>
+          <li>도판(사진)·식·인물 메달·시간축을 한 판에</li>
+          <li>찾기(Ctrl+F)로 모든 보드의 글자를 바로 찾아 이동</li>
+        </ul>
+        <a class="btn" href="samples/quantum.walkie" download>샘플: 양자역학의 탄생 연구 지도</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="family">
+    <div class="use">
+      <div>
+        <p class="who">가족·친구·동호회</p>
+        <h2>여행·행사 계획을 말하면서 정리</h2>
+        <ul>
+          <li>지도 사진 위에 동선을 긋고, 포스트잇으로 할 일을 나눠요</li>
+          <li>그룹이 많아도 카테고리로 접어 깔끔하게</li>
+          <li>초대 링크 하나로 시작 — 받은 사람은 링크를 열면 설치·참여 방법이 나와요</li>
+        </ul>
+        <a class="btn" href="./#download">Walkie 받기</a>
+      </div>
+      <img src="img/category.png" alt="그룹 카테고리" loading="lazy">
+    </div>
+  </section>
+
+  <p class="note" style="margin-top:20px">샘플 파일(.walkie)은 Walkie를 설치한 뒤 두 번 누르면(폰은 파일 앱에서 열면) 새 보드로 불러와져요. 샘플 속 그림은 직접 그린 것이고, 이야기는 직접 요약했어요.</p>
+</main>
+<footer><div class="wrap"><a href="./">Walkie 배포 페이지</a> · <a href="terms.html">이용약관</a> · <a href="privacy.html">개인정보 처리방침</a></div></footer>
+</body>
+</html>
