@@ -44,6 +44,7 @@
     <div class="card">
       <h2><span class="step">1</span>Walkie 설치하기</h2>
       <p class="muted" id="osHint">이미 설치했다면 2번으로 넘어가세요.</p>
+      <p class="muted"><b>받기를 누르면 초대 링크가 자동으로 복사돼요.</b> 설치한 뒤 Walkie를 처음 열고 로그인하면 이 방에 참여할지 바로 물어봐요.</p>
       <a class="btn" id="getWin" href="https://github.com/inhyeuk/walkie-releases/releases/latest/download/WalkieSetup.exe">⬇ Windows용 받기</a>
       <a class="btn" id="getApk" href="https://github.com/inhyeuk/walkie-releases/releases/latest/download/Walkie-android.apk">📱 안드로이드 APK</a>
       <p class="muted">Windows에서 "PC 보호" 창이 뜨면 <b>추가 정보 → 실행</b>, 안드로이드는 "출처를 알 수 없는 앱 설치"를 허용해 주세요. <a href="./">자세히</a></p>
@@ -57,6 +58,7 @@
       <p class="muted" id="copied" aria-live="polite"></p>
       <p class="muted">단추가 안 되면: Walkie 홈 › <b>초대 링크로 참여</b>에 복사한 링크를 붙여 넣으세요.</p>
       <p class="muted" id="pin"></p>
+      <p class="warn hidden" id="bound">이 초대는 <b>받는 사람으로 지정된 이메일 계정</b>으로 로그인해야 들어올 수 있어요. 초대를 받은 이메일의 Google 계정으로 로그인해 주세요.</p>
     </div>
 
     <div class="card">
@@ -85,6 +87,7 @@
       p.set('o', o);
       document.getElementById('pin').textContent = '방장 확인 코드: ' + o.slice(0, 4) + '-' + o.slice(4, 8) + ' — 참여 창의 코드와 같아야 해요.';
     }
+    if (q.get('r') === '1') { p.set('r', '1'); document.getElementById('bound').classList.remove('hidden'); }
     var link = 'walkie://join?' + p.toString();
     if (n) {
       document.getElementById('title').textContent = '"' + n + '" 그룹에 초대받았어요';
@@ -96,6 +99,9 @@
       if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(done, function () { prompt('이 링크를 복사하세요', location.href); });
       else prompt('이 링크를 복사하세요', location.href);
     });
+    // 설치 단추를 누르면 초대 링크를 클립보드에 복사해 둔다 — 설치 뒤 Walkie가 처음 열릴 때 한 번 읽어 바로 참여 확인으로 이어 준다(서버로는 아무것도 보내지 않는다)
+    var stash = function () { try { if (navigator.clipboard) navigator.clipboard.writeText(link); } catch (e) {} };
+    ['getWin', 'getApk'].forEach(function (id) { document.getElementById(id).addEventListener('click', stash); });
     var ua = navigator.userAgent;
     if (/Android/i.test(ua)) { document.getElementById('getWin').classList.add('hidden'); document.getElementById('osHint').textContent = '안드로이드 폰이에요. 이미 설치했다면 2번으로 넘어가세요.'; }
     else if (/Windows/i.test(ua)) { document.getElementById('getApk').classList.add('hidden'); }
