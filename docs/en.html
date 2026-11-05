@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Walkie — talk while you lay out every document on one shared board</title>
+<meta name="description" content="Free ideation app for Windows and Android: a huge shared board for PDFs, photos, shapes and notes, with group calls and chat on the same screen. Excel and PowerPoint friendly. Nothing stored on servers. All features free until the end of 2026.">
+<meta name="keywords" content="whiteboard, collaborative board, ideation, mind map, group call, brainstorming, kanban, retrospective, meeting notes template, Excel chart, PowerPoint export, PDF merge, free, Walkie">
+<link rel="canonical" href="https://inhyeuk.github.io/walkie-releases/en.html">
+<link rel="alternate" hreflang="ko" href="https://inhyeuk.github.io/walkie-releases/">
+<link rel="alternate" hreflang="en" href="https://inhyeuk.github.io/walkie-releases/en.html">
+<link rel="alternate" hreflang="x-default" href="https://inhyeuk.github.io/walkie-releases/en.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Walkie — free beta">
+<meta property="og:description" content="Lay out documents, photos and shapes on one board and edit together while on a call and chat. Windows + Android, free until the end of 2026.">
+<meta property="og:image" content="https://inhyeuk.github.io/walkie-releases/img/og.png">
+<meta property="og:url" content="https://inhyeuk.github.io/walkie-releases/en.html">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Walkie", "alternateName": "Walkie Board", "applicationCategory": "BusinessApplication", "operatingSystem": "Windows 10, Windows 11, Android", "description": "An ideation app: lay out documents, PDFs, photos and shapes on one huge shared board and edit together while on a group call and chat. Conversations and boards are not stored on any server.", "url": "https://inhyeuk.github.io/walkie-releases/en.html", "image": "https://inhyeuk.github.io/walkie-releases/img/og.png", "downloadUrl": "https://github.com/inhyeuk/walkie-releases/releases/latest", "installUrl": "https://apps.microsoft.com/detail/9NZKLNJ2KMZ1", "softwareVersion": "1.0.193", "inLanguage": ["ko", "en", "fr"], "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<link rel="icon" href="img/logo.png">
+<style>
+  :root { --ink:#1E2228; --sub:#5A6275; --blue:#2F55D4; --line:#E3E6EE; --soft:#F4F6FB; --bg:#FFFFFF; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#E9ECF4; --sub:#A7AEBE; --line:#2B3140; --soft:#181C26; --bg:#10131A; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+  a { color: var(--blue); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+  header.hero { background: linear-gradient(135deg, #1E3FA8 0%, #4B3BC4 55%, #7A4FD0 100%); color: #fff; padding: 56px 0 64px; }
+  .hero .top { display: flex; align-items: center; gap: 14px; }
+  .hero img.logo { width: 64px; height: 64px; border-radius: 18px; box-shadow: 0 10px 24px rgba(0,0,0,.25); }
+  .hero h1 { font-size: clamp(28px, 5vw, 44px); margin: 22px 0 8px; letter-spacing: -0.5px; }
+  .hero p.lead { font-size: clamp(16px, 2.4vw, 20px); opacity: .92; margin: 0 0 22px; }
+  .pill { display: inline-block; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.4); padding: 4px 12px; border-radius: 99px; margin: 0 6px 6px 0; font-weight: 700; font-size: 14px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 20px; border-radius: 14px; font-weight: 800; text-decoration: none; font-size: 16px; }
+  .btn.primary { background: #fff; color: #2B3FB8; box-shadow: 0 8px 18px rgba(0,0,0,.18); }
+  .btn.ghost { background: rgba(255,255,255,.12); color: #fff; border: 1px solid rgba(255,255,255,.45); }
+  section { padding: 44px 0; }
+  h2 { font-size: 26px; margin: 0 0 18px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+  .card { background: var(--soft); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+  .card h3 { margin: 0 0 6px; font-size: 17px; }
+  .card p { margin: 0; color: var(--sub); font-size: 15px; }
+  .shot { width: 100%; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 10px 24px rgba(20,30,60,.12); }
+  .dl { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 720px) { .dl { grid-template-columns: 1fr; } }
+  .dl .card { display: flex; flex-direction: column; gap: 8px; }
+  .dl .card a.btn { background: var(--blue); color: #fff; align-self: flex-start; }
+  .qr { display: flex; gap: 14px; align-items: center; }
+  .qr img { width: 120px; height: 120px; border-radius: 12px; background: #fff; padding: 6px; }
+  .note { background: #FFF6E5; color: #5B4300; border: 1px solid #F2D49B; border-radius: 14px; padding: 14px 16px; font-size: 15px; }
+  ol li, ul li { margin-bottom: 6px; }
+  footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--sub); font-size: 14px; }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="top"><img class="logo" src="img/logo.png" alt=""><strong style="font-size:22px">Walkie</strong> <a href="./" style="color:#fff;margin-left:auto">한국어</a></div>
+    <h1>Talk while you lay out<br>every document on one board</h1>
+    <p class="lead">Walkie is an ideation app: place PDFs, photos, files, shapes and notes on a board over 10 m × 10 m and edit them together while on a group call and chat — on the same screen. The app is available in English, Korean and French.</p>
+    <span class="pill">Free beta</span><span class="pill">All features free until Dec 31, 2026</span><span class="pill">Windows + Android</span>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/inhyeuk/walkie-releases/releases/latest/download/WalkieSetup.exe">⬇ Download for Windows</a>
+      <a class="btn ghost" href="https://apps.microsoft.com/detail/9NZKLNJ2KMZ1">🛍 Microsoft Store</a>
+      <a class="btn ghost" href="https://github.com/inhyeuk/walkie-releases/releases/latest/download/Walkie-android.apk">📱 Android APK</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>What you can do</h2>
+    <div class="grid">
+      <div class="card"><h3>🗺 Everything on one huge board</h3><p>PDFs you can flip and search, photos, files, video, YouTube, pens, shapes, connectors, sticky notes, tables, mind maps and charts on one canvas.</p></div>
+      <div class="card"><h3>🎙 Call and chat without leaving</h3><p>One button starts a group call next to the board; chat, replies and reactions in the same window. Recording only in rooms where the host allows it, always shown.</p></div>
+      <div class="card"><h3>👀 Live cursors and laser</h3><p>See teammates' pointers, point with the laser (L) so everyone sees a glowing trail, react with emoji or raise your hand.</p></div>
+      <div class="card"><h3>⏱ Timer and dot voting</h3><p>Show one timer to everyone and vote on ideas with dots; keep the result on the board.</p></div>
+      <div class="card"><h3>💬 Comments and @mentions</h3><p>Comment on any object and @mention members to notify them. Send photos and files in chat.</p></div>
+      <div class="card"><h3>📊 Excel and PowerPoint</h3><p>Paste an Excel range or insert a workbook (up to 2,000 × 50) with its charts; link it and the board updates when you save. Export the board as editable .pptx.</p></div>
+      <div class="card"><h3>🧩 Frames, templates, versions</h3><p>8 templates (meeting notes, brainstorm, retro, kanban, novel plot, case analysis, lean canvas, study). Frames export as PDF pages or slides; save versions and restore later.</p></div>
+      <div class="card"><h3>🔒 Your content stays on devices</h3><p>Chats, boards and files are not kept on servers. Invited members' devices exchange signed, encrypted updates directly.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--soft)">
+  <div class="wrap">
+    <h2>Screenshots</h2>
+    <div class="grid">
+      <img class="shot" src="img/board-timeline.png" alt="Board: story timeline">
+      <img class="shot" src="img/board-network.png" alt="Board: research map">
+      <img class="shot" src="img/board-crime.png" alt="Board: organisation chart">
+      <img class="shot" src="img/category.png" alt="Group categories">
+    </div>
+  </div>
+</section>
+
+<section id="download">
+  <div class="wrap">
+    <h2>Download</h2>
+    <div class="dl">
+      <div class="card">
+        <h3>💻 Windows 10 · 11</h3>
+        <p>Installs without admin rights and <b>updates itself</b>. Prefer the <a href="https://apps.microsoft.com/detail/9NZKLNJ2KMZ1">Microsoft Store</a> if you want no SmartScreen warning.</p>
+        <a class="btn" href="https://github.com/inhyeuk/walkie-releases/releases/latest/download/WalkieSetup.exe">WalkieSetup.exe</a>
+        <p>No install: <a href="https://github.com/inhyeuk/walkie-releases/releases/latest/download/Walkie-Windows-portable.zip">portable zip</a>. If "Windows protected your PC" appears, choose <b>More info → Run anyway</b> (the installer is not code-signed yet).</p>
+      </div>
+      <div class="card">
+        <h3>📱 Android</h3>
+        <p>Provided as an APK (not on Google Play yet). Scan the QR code with your phone.</p>
+        <div class="qr"><img src="img/qr-apk.png" alt="APK QR code"><div><a class="btn" href="https://github.com/inhyeuk/walkie-releases/releases/latest/download/Walkie-android.apk">Walkie-android.apk</a></div></div>
+        <p>Allow "install unknown apps" when asked. The app downloads new versions on Wi-Fi and asks before installing.</p>
+      </div>
+    </div>
+    <p style="margin-top:14px">All releases: <a href="https://github.com/inhyeuk/walkie-releases/releases">release list</a> · each release has a signed <code>SHA256SUMS.txt</code> (Ed25519 key 8470ef683f68386c1689af9a569e6152a41d43e34aaa8a109a09fc7a188f34c0).</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="note"><b>Beta</b> — free beta; features and terms may change before the official release. The terms of use and privacy policy are currently in Korean (<a href="terms.html">terms</a>, <a href="privacy.html">privacy</a>). For users aged 14 and over.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="terms.html">Terms (Korean)</a> · <a href="privacy.html">Privacy (Korean)</a> · <a href="https://github.com/inhyeuk/walkie-releases/issues">Contact / bug report</a> · <a href="./">한국어</a><br>
+    © 2026 Walkie (beta)
+  </div>
+</footer>
+</body>
+</html>
