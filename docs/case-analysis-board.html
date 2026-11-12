@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>사건 정리 보드 — 인물·증거·타임라인을 실로 잇는 무료 수사 보드</title>
+<meta name="description" content="추리·TRPG·사건 분석을 위한 무료 보드 템플릿. 인물 카드, 증거 사진, 관계선, 시간순 타임라인을 한 판에 두고 통화하며 함께 추리해요.">
+<link rel="canonical" href="https://inhyeuk.github.io/walkie-releases/case-analysis-board.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://inhyeuk.github.io/walkie-releases/case-analysis-board.html">
+<meta property="og:title" content="사건 정리 보드 — 인물·증거·타임라인을 실로 잇는 무료 수사 보드">
+<meta property="og:description" content="추리·TRPG·사건 분석을 위한 무료 보드 템플릿. 인물 카드, 증거 사진, 관계선, 시간순 타임라인을 한 판에 두고 통화하며 함께 추리해요.">
+<meta property="og:image" content="https://inhyeuk.github.io/walkie-releases/img/tpl-case.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Walkie", "alternateName": "Walkie Board", "applicationCategory": "BusinessApplication", "operatingSystem": "Windows 10, Windows 11, Android", "url": "https://inhyeuk.github.io/walkie-releases/case-analysis-board.html", "image": "https://inhyeuk.github.io/walkie-releases/img/tpl-case.png", "description": "추리·TRPG·사건 분석을 위한 무료 보드 템플릿. 인물 카드, 증거 사진, 관계선, 시간순 타임라인을 한 판에 두고 통화하며 함께 추리해요.", "installUrl": "https://apps.microsoft.com/detail/9NZKLNJ2KMZ1", "downloadUrl": "https://github.com/inhyeuk/walkie-releases/releases/latest", "inLanguage": ["ko", "en", "fr"], "offers": {"@type": "Offer", "price": "0", "priceCurrency": "KRW"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "사진이나 PDF 증거도 올릴 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "네. 사진·PDF·워드·엑셀 파일을 끌어다 놓거나 붙여 넣으면 보드 위 카드가 돼요. PDF는 쪽을 넘겨 볼 수 있어요."}}, {"@type": "Question", "name": "여러 명이 동시에 고칠 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "네. 그룹 멤버가 같은 보드를 동시에 고치고, 통화와 채팅도 같은 화면에서 해요."}}]}]</script>
+<link rel="icon" href="img/logo.png">
+<style>
+:root{--ink:#1E2228;--sub:#5A6275;--blue:#2F55D4;--line:#E3E6EE;--soft:#F4F6FB;--bg:#FFFFFF}
+@media (prefers-color-scheme: dark){:root{--ink:#E9ECF4;--sub:#A7AEBE;--line:#2B3140;--soft:#181C26;--bg:#10131A}}
+*{box-sizing:border-box} body{margin:0;font-family:"Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
+a{color:var(--blue)} .wrap{max-width:1000px;margin:0 auto;padding:0 16px}
+header{background:linear-gradient(135deg,#1E3FA8 0%,#4B3BC4 55%,#7A4FD0 100%);color:#fff;padding:36px 0 44px}
+header .home{color:#fff;text-decoration:none;font-weight:800}
+header h1{font-size:clamp(24px,5vw,38px);margin:14px 0 8px;letter-spacing:-.3px} header p{margin:0;opacity:.93;font-size:clamp(15px,2.2vw,18px)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn{display:inline-block;padding:11px 17px;border-radius:12px;font-weight:800;text-decoration:none;background:var(--blue);color:#fff}
+header .btn{background:#fff;color:#2B3FB8} header .btn.ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.45)}
+.btn.ghost{background:transparent;color:var(--blue);border:1px solid var(--blue)}
+section{padding:30px 0;border-bottom:1px solid var(--line)} h2{font-size:22px;margin:0 0 12px}
+.who{color:var(--sub);font-weight:700} ul{padding-left:20px} li{margin-bottom:5px}
+.shot{width:100%;border-radius:14px;border:1px solid var(--line);box-shadow:0 10px 24px rgba(20,30,60,.12);margin:10px 0;background:#fff}
+ol.steps li{margin-bottom:8px}
+table{border-collapse:collapse;width:100%;font-size:15px} th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top} th{background:var(--soft)}
+details{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:8px 0} summary{font-weight:700;cursor:pointer}
+.related a{display:inline-block;margin:4px 8px 4px 0} .note{color:var(--sub);font-size:14px}
+footer{padding:24px 0 40px;color:var(--sub);font-size:14px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="home" href="./">← Walkie</a>
+  <h1>수사 기록 벽처럼: 인물·증거·관계를 실로 잇기</h1>
+  <p>사진·증거 카드·관계선·타임라인을 한 판에. 함께 통화하며 실시간으로 옮기고 추리해요.</p>
+  <div class="btns">
+    <a class="btn" href="https://github.com/inhyeuk/walkie-releases/releases/latest/download/WalkieSetup.exe">Windows 무료 받기</a>
+    <a class="btn ghost" href="https://apps.microsoft.com/detail/9NZKLNJ2KMZ1">Microsoft Store</a>
+    <a class="btn ghost" href="https://github.com/inhyeuk/walkie-releases/releases/latest/download/Walkie-android.apk">안드로이드 APK</a>
+  </div>
+</div></header>
+<main class="wrap">
+  <section>
+    <p class="who">이런 분께: 추리 소설·TRPG 모임, 드라마·사건을 분석하는 사람, 조사·감사 업무</p>
+    <h2>Walkie로 할 수 있는 것</h2>
+    <ul><li>인물·증거·장소 구역과 타임라인이 나뉜 템플릿</li><li>카드에 붙인 선은 카드를 옮겨도 따라오고, 선 위에 &quot;협박&quot;, &quot;목격&quot; 같은 설명</li><li>사진·PDF·엑셀 표를 붙여 넣으면 그대로 보드 위 카드로</li><li>레이저 포인터·함께 보는 커서로 &quot;여기 보세요&quot;를 바로</li><li>보드는 서버에 저장되지 않아 민감한 자료도 멤버 기기에만 남아요</li></ul>
+    <img class="shot" src="img/tpl-case.png" alt="사건 정리 보드 템플릿" loading="lazy"><img class="shot" src="img/board-crime.png" alt="범죄 조직도 샘플 보드" loading="lazy">
+  </section>
+  <section>
+    <h2>템플릿으로 바로 시작</h2>
+    <ol class="steps">
+      <li>Walkie를 설치해요(Windows 10·11, 안드로이드). 혼자 쓰는 "이 기기 보드"는 로그인 없이 바로 열려요.</li>
+      <li>아래 템플릿 파일(.walkie)을 받아 두 번 누르면 Walkie에서 새 보드 한 장으로 열려요. 앱 안 도구 묶음의 "템플릿"에도 같은 템플릿이 있어요.</li>
+      <li>함께 쓰려면 그룹을 만들고 초대 링크를 보내요. 통화를 켜고 같은 보드를 동시에 고쳐요.</li>
+    </ol>
+    <div class="btns"><a class="btn" href="templates/case.walkie" download>사건 정리 템플릿 받기</a><a class="btn ghost" href="samples/valley_of_fear.walkie" download>샘플: 셜록 홈스 조직도</a><a class="btn ghost" href="samples/breaking_bad.walkie" download>샘플: 범죄 드라마 세력도</a><a class="btn ghost" href="samples/marriage.walkie" download>샘플: 결혼의 완성 관계도</a></div>
+  </section>
+  
+  <section>
+    <h2>자주 묻는 질문</h2>
+    <details><summary>사진이나 PDF 증거도 올릴 수 있나요?</summary><p>네. 사진·PDF·워드·엑셀 파일을 끌어다 놓거나 붙여 넣으면 보드 위 카드가 돼요. PDF는 쪽을 넘겨 볼 수 있어요.</p></details><details><summary>여러 명이 동시에 고칠 수 있나요?</summary><p>네. 그룹 멤버가 같은 보드를 동시에 고치고, 통화와 채팅도 같은 화면에서 해요.</p></details>
+  </section>
+  <section class="related">
+    <h2>다른 쓰임새</h2>
+    <a href="novel-plot-board.html">소설 플롯 보드</a><a href="meeting-notes-template.html">회의록 템플릿</a><a href="brainstorming-board.html">브레인스토밍 보드</a><a href="miro-alternative.html">Miro 무료 대안</a><a href="figjam-alternative.html">FigJam 한국어 대안</a><a href="uses.html">활용 사례 전체</a><a href="./">Walkie 소개</a>
+  </section>
+</main>
+<footer class="wrap">Walkie · 무료 베타 · <a href="privacy.html">개인정보 처리방침</a> · <a href="terms.html">이용약관</a> · <a href="https://github.com/inhyeuk/walkie-releases/issues">문의</a></footer>
+</body>
+</html>
