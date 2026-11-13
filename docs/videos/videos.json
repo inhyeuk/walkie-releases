@@ -1,0 +1,101 @@
+{
+    "v":  1,
+    "updated":  "2026-11-13",
+    "videos":  [
+                   {
+                       "id":  "promo-29s-ko",
+                       "lang":  "ko",
+                       "title":  {
+                                     "ko":  "Walkie 한눈에 보기 — 10m 보드·문서 편집·함께 작업"
+                                 },
+                       "desc":  {
+                                    "ko":  "포스트잇에서 10m 넘는 보드까지, 워드를 PDF로 바꿔 쪽을 나누고 합치기, 폰과 PC에서 함께 고치기"
+                                },
+                       "url":  "https://github.com/inhyeuk/walkie-releases/releases/download/media/walkie-promo-29s.mp4",
+                       "size":  11277831,
+                       "poster":  "https://github.com/inhyeuk/walkie-releases/releases/download/media/walkie-promo-29s-thumb.jpg",
+                       "duration":  29,
+                       "vertical":  true,
+                       "added":  "2026-11-13",
+                       "tags":  [
+                                    "소개"
+                                ]
+                   },
+                   {
+                       "id":  "promo-29s-en",
+                       "lang":  "en",
+                       "title":  {
+                                     "en":  "Walkie at a glance — a 10m board, document editing, working together"
+                                 },
+                       "desc":  {
+                                    "en":  "From sticky notes to a 10m+ board, turn Word into a PDF and split or merge pages, edit together on phones and PCs"
+                                },
+                       "url":  "https://github.com/inhyeuk/walkie-releases/releases/download/media/walkie-promo-29s-en.mp4",
+                       "size":  11713206,
+                       "poster":  "https://github.com/inhyeuk/walkie-releases/releases/download/media/walkie-promo-29s-en-thumb.jpg",
+                       "duration":  29,
+                       "vertical":  true,
+                       "added":  "2026-11-13",
+                       "tags":  [
+                                    "intro"
+                                ]
+                   },
+                   {
+                       "id":  "short-wall",
+                       "lang":  "ko",
+                       "title":  {
+                                     "ko":  "끝없이 넓어지는 보드 — 12.7m 세력도"
+                                 },
+                       "desc":  {
+                                    "ko":  "얽히고설킨 관계도·연구 지도·회의록을 한 판에"
+                                },
+                       "url":  "https://github.com/inhyeuk/walkie-releases/releases/download/media/short-wall.mp4",
+                       "size":  11525221,
+                       "poster":  "https://github.com/inhyeuk/walkie-releases/releases/download/media/short-wall-thumb.jpg",
+                       "duration":  15,
+                       "vertical":  true,
+                       "added":  "2026-11-13",
+                       "tags":  [
+                                    "보드"
+                                ]
+                   },
+                   {
+                       "id":  "short-edit",
+                       "lang":  "ko",
+                       "title":  {
+                                     "ko":  "점 편집 — 도형과 화살표를 PPT처럼 휘기"
+                                 },
+                       "desc":  {
+                                    "ko":  "꼭짓점·변 손잡이로 모양을 바꾸고, 붙은 선은 따라와요"
+                                },
+                       "url":  "https://github.com/inhyeuk/walkie-releases/releases/download/media/short-edit.mp4",
+                       "size":  2369335,
+                       "poster":  "https://github.com/inhyeuk/walkie-releases/releases/download/media/short-edit-thumb.jpg",
+                       "duration":  15,
+                       "vertical":  true,
+                       "added":  "2026-11-13",
+                       "tags":  [
+                                    "도형"
+                                ]
+                   },
+                   {
+                       "id":  "short-mind",
+                       "lang":  "ko",
+                       "title":  {
+                                     "ko":  "마인드맵 — + 한 번이면 새 가지"
+                                 },
+                       "desc":  {
+                                    "ko":  "겹치지 않게 저절로 정리되는 마인드맵"
+                                },
+                       "url":  "https://github.com/inhyeuk/walkie-releases/releases/download/media/short-mind.mp4",
+                       "size":  2265591,
+                       "poster":  "https://github.com/inhyeuk/walkie-releases/releases/download/media/short-mind-thumb.jpg",
+                       "duration":  15,
+                       "vertical":  true,
+                       "added":  "2026-11-13",
+                       "tags":  [
+                                    "마인드맵"
+                                ]
+                   }
+               ]
+}
